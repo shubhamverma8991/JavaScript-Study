@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div ng-app="mainApp" ng-controller="rectangle">
+      <p>Hi-{{type}}</p>
+      <div ng-controller="circle">
+        <p>Hi-{{type}}</p>
+      </div>
+      <div ng-controller="square">
+        <p>Hi-{{type}}</p>
+      </div>
+    </div>
+
+    <script>
+      var mainApp = angular.module("mainApp", []);
+      mainApp.controller("rectangle", function ($scope) {
+        $scope.type = "Rectangle";
+      });
+      mainApp.controller("circle", function ($scope) {});
+      mainApp.controller("square", function ($scope) {
+        $scope.type = "Square";
+      });
+    </script>
+  </body>
+</html>

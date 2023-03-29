@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(6, 100px);
+        grid-template-rows: repeat(5, 100px);
+        gap: 10px;
+      }
+      #item1 {
+        grid-area: 1 / 1 / 4 / 5;
+        background: green;
+      }
+      #item2 {
+        grid-area: 1 / 5 / 4 / 7;
+        background: red;
+      }
+      #item3 {
+        grid-area: 4 / 1 / 6 / 3;
+        background: blue;
+      }
+      #item4 {
+        grid-area: 4 / 3 / 6 / 7;
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="democlass" id="demoid"></p>
+    <input type="text" name="" id="inputtext" />
+    <!-- <script src="forLoop and Forinloop.js"></script> -->
+    <!-- <script src="array.js"></script> -->
+    <!-- <script src="array1.js"></script> -->
+    <!-- <script src="object.js"></script> -->
+    <!-- <script src="domManipulation.js"></script> -->
+    <!-- <script src="ClassList.js"></script> -->
+    <!-- <script src="await&Promise.js"></script> -->
+    <!-- <script src="new.js"></script> -->
+
+    <div class="grid">
+      <div class="item1" id="item1"></div>
+      <div class="item2" id="item2"></div>
+      <div class="item3" id="item3"></div>
+      <div class="item4" id="item4"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <input type="radio" name="out" id="out" value="out" class="btn" />
+      <label for="out">Out</label>
+      <input type="radio" name="need" id="need" value="need" class="btn" />
+      <label for="need">need</label>
+      <button type="submit" class="mainbtn" id="mainbtn">Submit</button>
+
+      <script>
+        let radio = document.querySelectorAll(".btn");
+        console.log(radio);
+        const element = document.getElementById("mainbtn");
+        element.addEventListener("click", myFunction);
+
+        function myFunction() {
+          for (const btn of radio) {
+            if (btn.checked) {
+              console.log(btn.value);
+              postData(btn.value, btn.id);
+            }
+          }
+        }
+
+        async function postData(value, id) {
+          let user = {
+            Id: id,
+            Customer: value,
+          };
+
+          try {
+            const response = http.post("./data.json", user);
+            console.log("Request successful!");
+          } catch (error) {
+            if (error.response) {
+              console.log(error.reponse.status);
+            } else {
+              console.log(error.message);
+            }
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>
